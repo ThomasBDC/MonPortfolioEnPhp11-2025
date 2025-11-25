@@ -180,3 +180,14 @@ body {
         text-align: center;
     }
 }
+
+
+
+section.projects .list-projects {
+    display: flex;
+}
+
+section.projects .list-projects .project{
+    background-color: wheat;
+    padding: 30px;
+}
