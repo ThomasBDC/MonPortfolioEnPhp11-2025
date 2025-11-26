@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <?php require_once "includes/header.php"; ?>
 
     <main>
         <section class="hero-section">
-            <div>
+            <div class="hero-content">
                  <h1>Faites de vos idées des projets, et de l'argent...</h1>
                 <div>Envoyez-moi votre idée de projet, et je vous la réalise en deux semaines (mensonge garanti).</div>
             </div>
@@ -38,10 +39,12 @@
                             <p class="description">
                                 <?php echo htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8') . "\t"; ?>
                             </p>
-                            <!-- Lien Github -->
-                            <a href="<?php echo htmlspecialchars($row['github_link'], ENT_QUOTES, 'UTF-8') . "\n"; ?>">Github</a>
-                            <!-- Lien Projet -->
-                            <a href="<?php echo htmlspecialchars($row['project_link'], ENT_QUOTES, 'UTF-8') . "\n"; ?>">Voir</a>
+                            <div class="links">
+                                <!-- Lien Github -->
+                                <a href="<?php echo htmlspecialchars($row['github_link'], ENT_QUOTES, 'UTF-8') . "\n"; ?>" class="btn-link github" target="_blank"><i class="fab fa-github"></i> Github</a>
+                                <!-- Lien Projet -->
+                                <a href="<?php echo htmlspecialchars($row['project_link'], ENT_QUOTES, 'UTF-8') . "\n"; ?>" class="btn-link project-url" target="_blank"><i class="fas fa-external-link-alt"></i> Voir</a>
+                            </div>
                             <!-- Techos -->
                         </article>
                     <?php endforeach; ?>
