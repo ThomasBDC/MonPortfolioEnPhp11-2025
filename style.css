@@ -330,9 +330,70 @@ button, .btn {
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
-/* Skills & References (Basic Layout) */
-.skills, .references {
-    padding: var(--spacing-lg) var(--spacing-md);
+/* Skills Section */
+.skills {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--background-color);
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+}
+
+.list-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill {
+    background: var(--surface-color);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.skill:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.skill h3 {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--primary-color);
+    word-break: break-word;
+}
+
+.skill .img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.skill img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* References Section */
+.references {
+    padding: var(--spacing-xl) var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
 }

@@ -51,7 +51,33 @@
             </div>
         </section>
         <section class="skills">
+            <h2>Mes skills</h2>
+            <div class="list-skills">
+                <?php 
+                    $pdo = getDBConnection();
 
+                    $sql = "SELECT * FROM my_portfolio_php.skills;";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll();
+                    foreach ($result as $row) :?>
+                        <article class="skill">
+                            <?php if($row['logo'] == null): ?>
+                            <h3>
+                                <?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . "\t"; ?>
+                            </h3>
+                            <?php else: ?>
+                                <p class="img">
+                                    <img 
+                                    alt="<?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . "\t"; ?>"
+                                    src="<?php echo htmlspecialchars($row['logo'], ENT_QUOTES, 'UTF-8') . "\t"; ?>"/>
+                                </p>
+                                <?php
+                            endif;
+                            ?>
+                        </article>
+                    <?php endforeach; ?>
+            </div>
         </section>
         <section class="references">
 
