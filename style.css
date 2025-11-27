@@ -283,6 +283,20 @@ button, .btn {
     margin-top: auto;
 }
 
+.project .project-skills{
+    display: flex;
+    gap: var(--spacing-sm);
+    margin: 10px 0;
+    
+}
+
+.project .project-skills div{
+    padding: 2px 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius-full);
+}
+
 .btn-link {
     display: inline-flex;
     align-items: center;

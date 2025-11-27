@@ -34,6 +34,11 @@
                             <p class="description">
                                 <?php echoValue($row, 'description'); ?>
                             </p>
+                            <div class="project-skills">
+                                <?php foreach($row['skills'] as $skill): ?>
+                                    <div><?php echo $skill; ?></div>
+                                <?php endforeach ?>
+                            </div>
                             <div class="links">
                                 <!-- Lien Github -->
                                 <a href="<?php echoValue($row, 'github_link'); ?>" class="btn-link github" target="_blank"><i class="fab fa-github"></i> Github</a>
