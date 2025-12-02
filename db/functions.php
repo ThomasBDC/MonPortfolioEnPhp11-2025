@@ -18,6 +18,7 @@
             if(isset($projects[$row['idprojects']]) == false)
             {
                 $project = [
+                    'idprojects' => $row['idprojects'],
                     'title' => $row['title'],
                     'description' => $row['description'],
                     'github_link' => $row['github_link'],
@@ -61,6 +62,18 @@
             'description' => $description,
             'github_link' => $github_link,
             'project_link' => $project_link,
+        ]);
+
+        return $success;
+    }
+
+    function deleteProject($idProjectToDelete){
+        $pdo = getDBConnection();
+        $statement = $pdo->prepare('DELETE FROM projects 
+                    WHERE projects.idprojects = :idProjectToDelete');
+
+        $success = $statement->execute([
+            'idProjectToDelete' => $idProjectToDelete
         ]);
 
         return $success;

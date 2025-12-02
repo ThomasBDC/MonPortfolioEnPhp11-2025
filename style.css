@@ -619,3 +619,30 @@ button, .btn {
         .alert.error{
             background-color: #ff7878;
         }
+
+        /* Delete Button */
+        .btn-delete {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #DC2626; /* Red 600 */
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-delete:hover {
+            background-color: #B91C1C; /* Red 700 */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-delete:active {
+            transform: translateY(0);
+        }
