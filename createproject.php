@@ -1,3 +1,15 @@
+<?php 
+    require_once 'db/functions.php'; 
+    $message = null;
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // <!-- Cas où le formulaire a été rempli et soumis -->
+        $titre = $_POST["title"];
+        $description = $_POST["description"];
+        $github_link = $_POST["github_link"];
+        $project_link = $_POST["project_link"];
+        $success = insertProject($titre, $description, $github_link, $project_link);
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,8 +19,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="form-container">
         <div class="form-card">
+            <?php 
+                if(isset($success)):
+                    if($success):?>
+                        <div class="alert success">
+                            Le projet a bien été créé
+                        </div>
+                    <?php 
+                    else:?>
+                        <div class="alert error">
+                                Une erreur est survenue
+                        </div>
+                    <?php
+                    endif;
+                endif;?>
             <h1>Créer un projet</h1>
             <form action="" method="POST">
                 <div class="form-group">

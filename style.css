@@ -603,3 +603,19 @@ button, .btn {
         .submit-btn:active {
             transform: translateY(0);
         }
+
+        .alert{
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-radius: var(--radius-lg);
+        }
+
+        .alert.success{
+            background-color: #78ff93;
+        }
+
+        .alert.error{
+            background-color: #ff7878;
+        }

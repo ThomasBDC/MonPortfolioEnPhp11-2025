@@ -50,4 +50,19 @@
     function echoValue($row, $name){
         echo htmlspecialchars($row[$name], ENT_QUOTES, 'UTF-8') . "\t";
     }
+
+    function insertProject($title, $description, $github_link, $project_link){
+        $pdo = getDBConnection();
+        $statement = $pdo->prepare('INSERT INTO projects (title, description, github_link, project_link)
+            VALUES (:title, :description, :github_link, :project_link)');
+
+        $success = $statement->execute([
+            'title' => $title,
+            'description' => $description,
+            'github_link' => $github_link,
+            'project_link' => $project_link,
+        ]);
+
+        return $success;
+    }
 ?>
