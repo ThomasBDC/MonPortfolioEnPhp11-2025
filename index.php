@@ -29,7 +29,7 @@
             </div>
             <img src="img/thomas-bdc.jpg" alt="Photo de profile Thomas">
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <?php 
                 if(isset($success)):
                     if($success):?>
@@ -81,7 +81,7 @@
                     <?php endforeach; ?>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2>Mes skills</h2>
             <div class="list-skills">
                 <?php 
