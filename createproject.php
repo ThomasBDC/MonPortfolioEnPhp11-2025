@@ -1,4 +1,5 @@
 <?php 
+    require_once 'utils/session.php';
     require_once 'db/functions.php'; 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // <!-- Cas où le formulaire a été rempli et soumis -->
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php require_once "includes/header.php"; ?>
     
     <div class="form-container">
         <div class="form-card">
@@ -61,5 +63,7 @@
             </form>
         </div>
     </div>
+    <?php include_once "includes/footer.php"; ?>
+
 </body>
 </html>

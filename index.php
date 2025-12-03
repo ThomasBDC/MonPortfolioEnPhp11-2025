@@ -1,11 +1,11 @@
 <?php 
+    require_once 'utils/session.php';
     require_once 'db/functions.php';
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // <!-- Cas où le formulaire (suppression) a été rempli et soumis -->
         $idProjectToDelete = $_POST["idProjectToDelete"];
         $success = deleteProject($idProjectToDelete);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
