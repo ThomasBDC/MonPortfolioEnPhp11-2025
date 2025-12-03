@@ -1,6 +1,7 @@
 <?php 
     require_once 'utils/session.php';
     require_once 'db/functions.php'; 
+    requireLogin();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // <!-- Cas où le formulaire a été rempli et soumis -->
         $titre = $_POST["title"];

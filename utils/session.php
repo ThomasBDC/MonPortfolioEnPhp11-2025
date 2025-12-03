@@ -8,4 +8,10 @@ function isLoggedIn(){
     return $isLoggedIn;
 }
 
+function requireLogin() {
+    if (!isLoggedIn()) {
+        header('Location: login.php');
+        exit;
+    }
+}
 ?>
