@@ -10,7 +10,7 @@
 <body>
 <header class="site-header">
     <div class="logo">
-        <a href="#">Thomas BDC</a>
+        <a href="/index.php">Thomas BDC</a>
     </div>
     <nav class="main-nav">
         <ul>
