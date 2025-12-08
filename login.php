@@ -19,40 +19,28 @@
 
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <?php require_once "includes/header.php"; ?>
 
-    <main>
-        <div class="form-container">
-        <div class="form-card">
-            <h1>Me connecter</h1>
-            <form action="" method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
+<?php require_once "includes/header.php"; ?>
 
-                <div class="form-group">
-                    <label for="password">Mot de passe</label>
-                    <input name="password" id="password" required>
-                </div>
+<main>
+    <div class="form-container">
+    <div class="form-card">
+        <h1>Me connecter</h1>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
 
-                <button type="submit" class="submit-btn">Me connecter</button>
-            </form>
-        </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input name="password" id="password" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Me connecter</button>
+        </form>
     </div>
-    </main>
+</div>
+</main>
 
-    <?php include_once "includes/footer.php"; ?>
-
-</body>
-</html>
+<?php include_once "includes/footer.php"; ?>

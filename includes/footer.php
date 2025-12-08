@@ -23,3 +23,6 @@
         &copy; 2025 MonLogo. Tous droits réservés.
     </div>
 </footer>
+
+</body>
+</html>
