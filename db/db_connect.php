@@ -1,7 +1,7 @@
 <?php
 
 function getDBConnection(){
-    $config = require 'config.php';
+    $config = require __DIR__ . '/../ftpignore/config.php';
     try{
         $user = $config['DB_USER'];
         $pass= $config['DB_PASS'];

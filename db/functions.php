@@ -3,9 +3,9 @@
     function getAllProjects(){
         $pdo = getDBConnection();
                     
-        $sql = "SELECT * FROM my_portfolio_php.projects proj
-                LEFT JOIN my_portfolio_php.projects_skills projski ON proj.idprojects = projski.idproject
-                LEFT JOIN my_portfolio_php.skills ON skills.idskills = projski.idskill;";
+        $sql = "SELECT * FROM projects proj
+                LEFT JOIN projects_skills projski ON proj.idprojects = projski.idproject
+                LEFT JOIN skills ON skills.idskills = projski.idskill;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -41,7 +41,7 @@
     function getAllSkills(){
         $pdo = getDBConnection();
 
-        $sql = "SELECT * FROM my_portfolio_php.skills;";
+        $sql = "SELECT * FROM skills;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -82,7 +82,7 @@
     function getUserByEmail($email){
         $pdo = getDBConnection();
 
-        $sql = "SELECT * FROM my_portfolio_php.users WHERE email = :email;";
+        $sql = "SELECT * FROM users WHERE email = :email;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             'email' => $email
